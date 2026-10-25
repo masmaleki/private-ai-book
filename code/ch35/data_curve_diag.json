@@ -1,0 +1,20 @@
+{
+ "50": {
+  "from_email": 0,
+  "from_training_set": 53,
+  "other": 4,
+  "invalid": 3
+ },
+ "200": {
+  "from_email": 0,
+  "from_training_set": 11,
+  "other": 42,
+  "invalid": 7
+ },
+ "400": {
+  "from_email": 25,
+  "from_training_set": 0,
+  "other": 35,
+  "invalid": 0
+ }
+}

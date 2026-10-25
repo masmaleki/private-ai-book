@@ -1,0 +1,7 @@
+setup           Recall@5    MRR  nDCG@5
+bm25               0.800  0.800   0.766
+vector             0.900  0.889   0.844
+hybrid             0.933  0.889   0.864
+hybrid+rerank      0.867  0.889   0.815
+
+leak test: other-tenant chunks in top-10 -> without ACL: 6, with ACL: 0

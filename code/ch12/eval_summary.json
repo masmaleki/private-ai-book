@@ -1,0 +1,121 @@
+{
+  "eval_cases": 5,
+  "intent_accuracy": 0.8,
+  "route_match": 1.0,
+  "FastNLP_share_1000": 0.78,
+  "LLM_only_avg_latency_ms": 850.0,
+  "Hybrid_avg_latency_ms": 187.4,
+  "speedup_factor": 4.53,
+  "gpu_tokens_saved_pct": 78.0,
+  "results": [
+    {
+      "normalized": "سلام سارا، لطفا برای 2.500 عدد STM32F407VGT6 با قیمت هدف 9.10 EUR در 4 هفته پیشنهاد بدهید.",
+      "intent": "RFQ",
+      "confidence": 1.0,
+      "margin": 1.0,
+      "route": "FAST_NLP",
+      "entities": {
+        "mpns": [
+          "STM32F407VGT6"
+        ],
+        "quantities": [
+          2500
+        ],
+        "target_prices_eur": [
+          9.1
+        ],
+        "lead_times": [
+          "4 هفته"
+        ]
+      },
+      "latency_ms": 0.215,
+      "id": "EM-01",
+      "true_intent": "RFQ",
+      "expected_route": "FAST_NLP"
+    },
+    {
+      "normalized": "Urgent quote needed: 4,000 pcs TPS5430DDAR @ 1.38 EUR max, delivery 2 weeks.",
+      "intent": "RFQ",
+      "confidence": 0.9923,
+      "margin": 0.9864,
+      "route": "FAST_NLP",
+      "entities": {
+        "mpns": [
+          "TPS5430DDAR"
+        ],
+        "quantities": [
+          4000
+        ],
+        "target_prices_eur": [
+          1.38
+        ],
+        "lead_times": [
+          "2 weeks"
+        ]
+      },
+      "latency_ms": 0.082,
+      "id": "EM-02",
+      "true_intent": "RFQ",
+      "expected_route": "FAST_NLP"
+    },
+    {
+      "normalized": "سلام، بسته سفارش PO-8841 هنوز نرسیده، لطفا کد رهگیری را بفرستید.",
+      "intent": "ORDER_STATUS",
+      "confidence": 0.9983,
+      "margin": 0.9967,
+      "route": "FAST_NLP",
+      "entities": {
+        "mpns": [],
+        "quantities": [],
+        "target_prices_eur": [],
+        "lead_times": []
+      },
+      "latency_ms": 0.076,
+      "id": "EM-03",
+      "true_intent": "ORDER_STATUS",
+      "expected_route": "FAST_NLP"
+    },
+    {
+      "normalized": "RMA needed: 150 pcs from yesterday shipment have oxidised leads and fail QC inspection.",
+      "intent": "QUALITY_CLAIM",
+      "confidence": 0.9476,
+      "margin": 0.8995,
+      "route": "FAST_NLP",
+      "entities": {
+        "mpns": [],
+        "quantities": [
+          150
+        ],
+        "target_prices_eur": [],
+        "lead_times": []
+      },
+      "latency_ms": 0.062,
+      "id": "EM-04",
+      "true_intent": "QUALITY_CLAIM",
+      "expected_route": "FAST_NLP"
+    },
+    {
+      "normalized": "We need 1500 pcs STM32F407VGT6 at 8.95 EUR, OR if lead time > 6 weeks propose a pin-compatible alternate and explain why last shipment had delay.",
+      "intent": "ORDER_STATUS",
+      "confidence": 0.4361,
+      "margin": 0.0244,
+      "route": "ESCALATE_LLM",
+      "entities": {
+        "mpns": [
+          "STM32F407VGT6"
+        ],
+        "quantities": [
+          1500
+        ],
+        "target_prices_eur": [],
+        "lead_times": [
+          "6 weeks"
+        ]
+      },
+      "latency_ms": 0.105,
+      "id": "EM-05",
+      "true_intent": "RFQ",
+      "expected_route": "ESCALATE_LLM"
+    }
+  ]
+}

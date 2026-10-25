@@ -1,0 +1,92 @@
+[
+ {
+  "model": "base",
+  "audio": "call.wav",
+  "wer_raw": 0.187,
+  "wer_norm": 0.098,
+  "S": 7,
+  "D": 1,
+  "I": 0,
+  "rtf": 0.027
+ },
+ {
+  "model": "base",
+  "audio": "call_snr0.wav",
+  "wer_raw": 0.879,
+  "wer_norm": 1.012,
+  "S": 45,
+  "D": 0,
+  "I": 38,
+  "rtf": 0.032
+ },
+ {
+  "model": "base",
+  "audio": "call_snr10.wav",
+  "wer_raw": 0.473,
+  "wer_norm": 0.451,
+  "S": 20,
+  "D": 0,
+  "I": 17,
+  "rtf": 0.027
+ },
+ {
+  "model": "small",
+  "audio": "call.wav",
+  "wer_raw": 0.132,
+  "wer_norm": 0.037,
+  "S": 2,
+  "D": 0,
+  "I": 1,
+  "rtf": 0.075
+ },
+ {
+  "model": "small",
+  "audio": "call_snr0.wav",
+  "wer_raw": 0.604,
+  "wer_norm": 0.622,
+  "S": 31,
+  "D": 2,
+  "I": 18,
+  "rtf": 0.091
+ },
+ {
+  "model": "small",
+  "audio": "call_snr10.wav",
+  "wer_raw": 0.22,
+  "wer_norm": 0.171,
+  "S": 11,
+  "D": 0,
+  "I": 3,
+  "rtf": 0.075
+ },
+ {
+  "model": "tiny",
+  "audio": "call.wav",
+  "wer_raw": 0.22,
+  "wer_norm": 0.11,
+  "S": 7,
+  "D": 0,
+  "I": 2,
+  "rtf": 0.019
+ },
+ {
+  "model": "tiny",
+  "audio": "call_snr0.wav",
+  "wer_raw": 0.89,
+  "wer_norm": 0.976,
+  "S": 51,
+  "D": 1,
+  "I": 28,
+  "rtf": 0.021
+ },
+ {
+  "model": "tiny",
+  "audio": "call_snr10.wav",
+  "wer_raw": 0.615,
+  "wer_norm": 0.622,
+  "S": 34,
+  "D": 0,
+  "I": 17,
+  "rtf": 0.021
+ }
+]

@@ -1,0 +1,36 @@
+tools: ['get_part_offers', 'get_inventory', 'predict_price']
+
+> get_inventory({"mpn": "STM32F407VGT6"})
+  isError=False {"on_hand": 122, "reserved": 47, "available": 75,
+    "snapshot_at": "2026-10-17"}
+
+> get_part_offers({"mpn": "stm32f407vgt6", "min_qty": 1000})
+  isError=False [{"supplier": "Supplier B (example)", "authorized": 1,
+    "qty": 2000, "unit_price": 8.4536, "currency": "EUR", "lead_days": 5}]
+
+> get_part_offers({"mpn": "STM32F407VGT6", "min_qty": 20000})
+  isError=False []
+
+> predict_price({"mpn": "STM32F407VGT6", "qty": 2500})
+  isError=False {"p50": 8.4536, "p10": 7.74, "p90": 9.7758, "model_version":
+    "stub-0", "currency": "EUR"}
+
+> get_part_offers({"mpn": "TPS5430DDAR", "tenant_id": "nordsensor"})
+  isError=True {"error": ["tenant_id: Extra inputs are not permitted"]}
+
+> create_purchase_order({"mpn": "TPS5430DDAR", "qty": 10000})
+  isError=True {"error": "unknown tool create_purchase_order"}
+
+> get_inventory({"mpn": "X"})
+  isError=True {"error": ["mpn: String should have at least 3 characters"]}
+
+reza sees tools: []
+
+audit log (user, tenant, tool, status):
+  sarah  alpenboard  get_inventory          ok
+  sarah  alpenboard  get_part_offers        ok
+  sarah  alpenboard  get_part_offers        ok
+  sarah  alpenboard  predict_price          ok
+  sarah  alpenboard  get_part_offers        invalid_args
+  sarah  alpenboard  create_purchase_order  denied_unknown_tool
+  sarah  alpenboard  get_inventory          invalid_args

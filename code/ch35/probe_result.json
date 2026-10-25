@@ -1,0 +1,45 @@
+{
+ "errors": {
+  "ok": 49,
+  "mpn_wrong": 11,
+  "qty_wrong": 0,
+  "both": 0,
+  "invalid": 0
+ },
+ "bad": [
+  [
+   "JKE656F",
+   500,
+   "{\"mpn\":\"JKE666F\",\"qty\":500}"
+  ],
+  [
+   "ERS404L",
+   500,
+   "{\"mpn\":\"ESS404L\",\"qty\":500}"
+  ],
+  [
+   "EUT401X",
+   5000,
+   "{\"mpn\":\"EUT421X\",\"qty\":5000}"
+  ],
+  [
+   "MSD781N",
+   250,
+   "{\"mpn\":\"MSD788N\",\"qty\":250}"
+  ]
+ ],
+ "new_phrasing": {
+  "kindly offer {q} pcs {m} asap.": [
+   0,
+   0
+  ],
+  "{m}: {q} pcs needed, thanks.": [
+   4,
+   0
+  ],
+  "price for {m} please, {q} pcs.": [
+   0,
+   0
+  ]
+ }
+}

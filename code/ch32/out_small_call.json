@@ -1,0 +1,43 @@
+{
+ "model": "small",
+ "wav": "call.wav",
+ "seconds": 2.8,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.2,
+   "text": "Hello, Marcus. This is Sarah from Alpenline. How can I help?"
+  },
+  {
+   "start": 4.8,
+   "end": 10.6,
+   "text": "Hi, Sarah. We need 2,500 STM32 controllers for the new board."
+  },
+  {
+   "start": 11.2,
+   "end": 15.4,
+   "text": "The production run starts in three weeks, so delivery is critical."
+  },
+  {
+   "start": 16.0,
+   "end": 20.6,
+   "text": "Understood. I will check the supplier and send you a date by Thursday."
+  },
+  {
+   "start": 21.2,
+   "end": 26.2,
+   "text": "Good. Price is less important this time, but please do not be late again."
+  },
+  {
+   "start": 26.8,
+   "end": 30.4,
+   "text": "I will also look for an alternate part in case stock is short."
+  },
+  {
+   "start": 31.2,
+   "end": 36.8,
+   "text": "Perfect. You can reach me on my mobile, 06601234."
+  }
+ ]
+}

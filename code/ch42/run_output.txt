@@ -1,0 +1,22 @@
+retention -> {'call_audio': ['call-0412.wav']}
+erasure c1 ->
+  erp_contacts   rows removed: 1
+  search_index   rows removed: 1
+  vector_store   rows removed: 2
+  ft_dataset_v4  rows removed: 1
+  call_audio     rows removed: 0
+adapters to retrain without c1: ['sales-tone-v2']
+audit entry: {
+  "action": "erasure",
+  "subject": "c1",
+  "date": "2026-10-17",
+  "stores": [
+    "erp_contacts",
+    "ft_dataset_v4",
+    "search_index",
+    "vector_store"
+  ],
+  "follow_up": [
+    "sales-tone-v2"
+  ]
+}

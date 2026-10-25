@@ -1,0 +1,43 @@
+{
+ "model": "base",
+ "wav": "call.wav",
+ "seconds": 1.0,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.0,
+   "text": "Hello Marcus, this is Sarah from Openline. How can I help?"
+  },
+  {
+   "start": 4.8,
+   "end": 10.4,
+   "text": "Hi Sarah, we need 253m32 controllers for the new board."
+  },
+  {
+   "start": 11.12,
+   "end": 15.2,
+   "text": "The production runs starts in three weeks, so delivery is critical."
+  },
+  {
+   "start": 15.92,
+   "end": 20.4,
+   "text": "Understood, I will check the supplier and send you a mate by Thursday."
+  },
+  {
+   "start": 21.04,
+   "end": 25.84,
+   "text": "Good, price is less important this time, but please do not be late again."
+  },
+  {
+   "start": 26.64,
+   "end": 30.32,
+   "text": "I will also look for an alternate part in case talk is short."
+  },
+  {
+   "start": 31.12,
+   "end": 37.04,
+   "text": "Perfect. You can reach me on my mobile 066001234."
+  }
+ ]
+}

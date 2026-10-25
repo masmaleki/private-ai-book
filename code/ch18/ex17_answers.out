@@ -1,0 +1,8 @@
+tokens: ['8', '6', '12', '4']
+min-p 0.05: [0.6285 0.2312 0.1402 0.    ]
+min-p 0.1: [0.6285 0.2312 0.1402 0.    ]
+min-p 0.3: [0.7311 0.2689 0.     0.    ]
+flat logits, min-p 0.3: [0.2887 0.2612 0.2363 0.2138]
+cached: '250, max lead time 12 weeks.'
+naive : '250, max lead time 12 weeks.'
+identical: True

@@ -1,0 +1,13 @@
+vocab        : ['"8"', '8', 'eight', 'about', '6', '}']
+unconstrained: [0.153 0.34  0.206 0.113 0.125 0.062]
+constrained  : [0.    0.731 0.    0.    0.269 0.   ]
+free for KV: 31.5 GB, per token 128 KiB, tokens 240,326, 4k-conversations 59
+bandwidth 1 TB/s -> <= 74 tokens/s (one stream)
+bandwidth 2 TB/s -> <= 148 tokens/s (one stream)
+ex1 T=1  : [0.5089 0.3087 0.1136 0.0689]
+ex1 T=0.5: [0.6964 0.2562 0.0347 0.0128]
+ex2 top-p 0.8: [0.6225 0.3775 0.     0.    ]
+ex3 one 32k seq: 1.75 GiB, 10 users: 17.5 GiB, per token 56 KiB
+ex4 before: [0.6897 0.0566 0.2537] after logits: [ 1.6667 -0.6     1.    ] -> [0.6184 0.0641 0.3175]
+ex8 fp16: tokens 228,882, 6k requests 37.3
+ex8 fp8: tokens 457,764, 6k requests 74.5

@@ -1,0 +1,4 @@
+p(next char = '4') = 0.188
+p(next char = '6') = 0.213
+p(next char = '8') = 0.204
+p(next char = '1') = 0.393

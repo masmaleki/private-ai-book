@@ -1,0 +1,43 @@
+{
+ "model": "small",
+ "wav": "call_snr10.wav",
+ "seconds": 2.8,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.1,
+   "text": "Hello, Marcus. This is Sarah from Elvenline. How can I help?"
+  },
+  {
+   "start": 4.9,
+   "end": 10.5,
+   "text": "Hi, Sarah. We need 25 hundred SDM32 controllers for the new mod."
+  },
+  {
+   "start": 11.2,
+   "end": 15.4,
+   "text": "The production run starts in three weeks, so delivery is critical."
+  },
+  {
+   "start": 16.0,
+   "end": 20.5,
+   "text": "Understood. I will check the supplier and send you a made-by-term date."
+  },
+  {
+   "start": 21.2,
+   "end": 26.1,
+   "text": "Good. Price is less important this time, but please do not be late again."
+  },
+  {
+   "start": 26.6,
+   "end": 30.6,
+   "text": "I will also look for an alternative part in case stuck in short."
+  },
+  {
+   "start": 31.1,
+   "end": 36.6,
+   "text": "Perfect. You can reach me on my mobile, Nero66 Nero1234."
+  }
+ ]
+}

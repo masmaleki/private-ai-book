@@ -1,0 +1,30 @@
+{
+ "dataset": "rfq-extract-and-reply",
+ "version": "v1",
+ "created": "2026-09-14",
+ "source": "mailbox:sales-shared (example export)",
+ "filters": [
+  "defence tenant (must never be here)",
+  "no consent / opted out",
+  "not approved (draft)",
+  "empty or too short reply",
+  "reply language != email language",
+  "internal info in reply",
+  "label does not match email",
+  "exact duplicate",
+  "near duplicate (Jaccard >= 0.8)",
+  "duplicate after pseudonymisation"
+ ],
+ "files_sha256": {
+  "extract_train.jsonl": "3342854659b8c2d10a7ba1752d69ca9babd76193600e4c68e2ed8a6e43c245e4",
+  "extract_val.jsonl": "cb265eb939d4944810af9d40724ab48cfd5f9294fd32bb2bfcc5af45fde95950",
+  "extract_test.jsonl": "3a060407b3400227774b41e9c2ff622ddc9214036e1f7c5ffd31a004bf1467f4",
+  "reply_train.jsonl": "c2e4dfeac58d69e5097032fee0b60f0d5463df4ac6111cb1bf3da316c25f6f93",
+  "reply_val.jsonl": "3c935b624f6942aa645260cd38c34bb1ec2bacd87284e2e70acc79c3a131131c",
+  "reply_test.jsonl": "a7abd3717cbb2144fd130a85b12c7ba6e18c8cd25533876a51713a2334bd90fe"
+ },
+ "approvals": {
+  "dpo": "pending",
+  "sales_review": "pending"
+ }
+}

@@ -1,0 +1,2 @@
+entropy floor (nats/char): 0.1347
+memo final {'step': 1500, 'train': 0.06973608583211899, 'val': 0.5197296440601349, 'sec': 90.8}

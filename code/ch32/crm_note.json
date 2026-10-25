@@ -1,0 +1,40 @@
+{
+ "source": "out_small_call_snr10.json",
+ "note": {
+  "summary": "Customer needs 2,500 STM32 controllers; run starts in 3 weeks.",
+  "needs": [
+   {
+    "mpn_hint": "STM32",
+    "qty": 2500,
+    "quote": "We need 2,500 STM32 controllers"
+   }
+  ],
+  "sensitivity": "lead_time",
+  "commitments": [
+   {
+    "owner": "SARAH",
+    "action": "send delivery date",
+    "due": "Thursday",
+    "quote": "send you a date by Thursday"
+   },
+   {
+    "owner": "SARAH",
+    "action": "look for alternate part",
+    "due": null,
+    "quote": "look for an alternate part"
+   }
+  ],
+  "risks": [
+   {
+    "text": "previous late delivery",
+    "quote": "do not be late again"
+   }
+  ]
+ },
+ "errors": [
+  "needs: quote not in transcript: 'We need 2,500 STM32 controllers'",
+  "commitments: quote not in transcript: 'send you a date by Thursday'",
+  "commitments: quote not in transcript: 'look for an alternate part'",
+  "needs: qty 2500 not in transcript"
+ ]
+}

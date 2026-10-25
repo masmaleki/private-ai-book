@@ -1,0 +1,11 @@
+Q: Does EXS-BUCK36-SO8 work with 28 V input, and what current at 105 °C?
+  retrieved: DS-0001#2, DS-0001#3, DS-0001#0, PCN-2026-014#0
+  A: Output current IOUT | TA = 105 °C | | | 2.1 | A [DS-0001#2]
+  A: Input voltage VIN | | 4.5 | | 36 | V [DS-0001#2]
+  A: Quiescent current | no load, VIN = 24 V | | 85 | 120 | µA [DS-0001#2]
+
+Q: What does Supplier B charge for EXS-BUCK36-SO8?
+  retrieved: PCN-2026-014#0, CUST-NS-01#0, DS-0001#1, DS-0001#4
+  A: Very price-sensitive; target price for EXS-BUCK36-SO8 is below 0.95 EUR
+     at [CUST-NS-01#0]
+

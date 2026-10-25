@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 8918.61it/s]
+[base] "ATMEGA328P-AU, 5,000 pcs, 5,000, 5,000, 5,000, 5,000,
+[base] "STM32F407VGT6, 100 pcs, 100000000000000000000000000
+[base] valid JSON 4/16, exact match 0/16
+[base+LoRA] {"mpn": "ATMEGA328P-AU", "qty": 5000, "priority": "unknown"}
+[base+LoRA] {"mpn": "STM32F407VGT6", "qty": 100, "priority": "unknown"}
+[base+LoRA] valid JSON 16/16, exact match 13/16
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  7.04it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  7.02it/s]
+merged model saved to out/merged
