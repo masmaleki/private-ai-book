@@ -1,0 +1,58 @@
+[
+ {
+  "query": "EXS-BUCK36-SO8 maximum input voltage",
+  "ranks": [
+   1,
+   2,
+   1
+  ]
+ },
+ {
+  "query": "EXSLDO500",
+  "ranks": [
+   null,
+   1,
+   1
+  ]
+ },
+ {
+  "query": "exs-buk36 derating",
+  "ranks": [
+   1,
+   2,
+   1
+  ]
+ },
+ {
+  "query": "2.1 A",
+  "ranks": [
+   2,
+   1,
+   2
+  ]
+ },
+ {
+  "query": "which converter for a 24 V rail",
+  "ranks": [
+   5,
+   3,
+   5
+  ]
+ },
+ {
+  "query": "how hot can the microcontroller run",
+  "ranks": [
+   null,
+   16,
+   17
+  ]
+ },
+ {
+  "query": "R\u00fccksendung ge\u00f6ffnete Rolle",
+  "ranks": [
+   null,
+   3,
+   3
+  ]
+ }
+]

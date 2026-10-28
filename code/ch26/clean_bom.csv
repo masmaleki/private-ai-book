@@ -1,0 +1,16 @@
+line,input,mpn,qty,status,conf,reason,flags
+1,NE555DR,NE555DR,10,auto,0.99,exact,
+2,stm32f407 vgt6,STM32F407VGT6,2500,review,0.97,exact after normalisation,qty 2500 != 1 designators
+3,STM32F407VGT6TR,STM32F407VGT6,1,auto,0.93,packaging suffix TR removed,
+4,STM32F4O7VGT6,STM32F407VGT6,1,auto,0.91,one look-alike character fixed,
+5,TPS5430DDAR,TPS5430DDAR,4,auto,0.99,exact,
+6,TPS5430 DDA R,TPS5430DDAR,2,auto,0.97,exact after normalisation,
+7,LM2596S-ADJ,LM2596S-ADJ,1,auto,0.99,exact,
+8,LM2956S-ADJ,LM2596S-ADJ,1,review,0.89,"fuzzy: distance 1, runner-up distance 8",
+9,GRM188R71H104KA93D,GRM188R71H104KA93D,1000,auto,0.99,exact,
+10,GRM188R71H104KA93,GRM188R71H104KA93D,20,review,0.75,input is a prefix (ordering suffix missing),
+11,"BC847C,215","BC847C,215",6,auto,0.99,exact,
+12,BC847C,"BC847C,215",3,review,0.75,input is a prefix (ordering suffix missing),
+13,(none),EXS-RES10K-0603,5,review,0.65,from description: Resistor 10k 0603,qty 5 != 4 designators
+14,EXS-BUCK36-S08,EXS-BUCK36-SO8,2,auto,0.91,one look-alike character fixed,
+15,XYZ-123-FOO,,1,unmatched,0.0,"fuzzy: distance 9, runner-up distance 9",

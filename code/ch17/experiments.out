@@ -1,0 +1,3 @@
+entropy floor (nats/char): 0.1347
+long run params 448704 final {'step': 3000, 'train': 0.17302700281143188, 'val': 0.17526409327983855, 'sec': 109.4}
+scale {'d': 16, 'params': 13344, 'val': 0.2627487242221832, 'sec': 13.1}

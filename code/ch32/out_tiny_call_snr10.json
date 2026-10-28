@@ -1,0 +1,43 @@
+{
+ "model": "tiny",
+ "wav": "call_snr10.wav",
+ "seconds": 0.8,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.0,
+   "text": "The low market is in shame with the male of the life. How can I tell?"
+  },
+  {
+   "start": 5.0,
+   "end": 11.0,
+   "text": "I swear, we need transit, I turn with SD and Earth if you can throw them from a new ward."
+  },
+  {
+   "start": 11.0,
+   "end": 16.0,
+   "text": "The production runs arcs in three weeks, so deliver it in prison."
+  },
+  {
+   "start": 16.0,
+   "end": 21.0,
+   "text": "Thunderstorm, I will kiss the supplier and change you away by turn gate."
+  },
+  {
+   "start": 21.0,
+   "end": 27.0,
+   "text": "Lord, price is less important this time, but clean do not be late again."
+  },
+  {
+   "start": 27.0,
+   "end": 31.0,
+   "text": "You will also look for an alternate part in case you start insurance."
+  },
+  {
+   "start": 31.0,
+   "end": 37.0,
+   "text": "Perfect, you can reach me on my mobile, 066-01-234."
+  }
+ ]
+}

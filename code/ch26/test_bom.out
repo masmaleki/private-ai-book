@@ -1,0 +1,8 @@
+PASS test_normaliser_has_no_collisions
+PASS test_key_ignores_case_space_dash
+PASS test_distances_by_hand
+PASS test_lookalike_auto_but_fuzzy_never_auto
+PASS test_unknown_is_unmatched
+PASS test_qty_and_refdes
+PASS test_bad_llm_mapping_rejected
+PASS test_whole_bom

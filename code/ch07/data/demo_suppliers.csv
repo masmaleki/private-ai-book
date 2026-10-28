@@ -1,0 +1,6 @@
+supplier_id,name,region,authorized
+1,Supplier-A,EU,True
+2,Supplier-B,EU,True
+3,Supplier-C,US,True
+4,Supplier-D,US,False
+5,Supplier-E,ASIA,False

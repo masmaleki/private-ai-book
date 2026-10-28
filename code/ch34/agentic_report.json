@@ -1,0 +1,76 @@
+{
+  "monolithic_skill_prompt_tokens": 1497,
+  "progressive_catalog_tokens": 150,
+  "loaded_one_skill_tokens": 392,
+  "4_line_bom": {
+    "single_agent_context_tokens": 4961,
+    "coordinator_context_tokens": 815,
+    "context_reduction_pct": 83.6
+  },
+  "50_line_bom_projection": {
+    "single_agent_context_tokens": 44797,
+    "coordinator_context_tokens": 3954,
+    "context_reduction_pct": 91.2
+  },
+  "reflection_pass1_ok": false,
+  "reflection_pass1_issues": [
+    "Line 2 (LM2596S-ADJ): offered_price 1.059 < floor 1.092"
+  ],
+  "reflection_pass2_ok": true,
+  "final_status": "READY_FOR_HUMAN_APPROVAL",
+  "lines": [
+    {
+      "mpn": "STM32F407VGT6",
+      "stock": 400,
+      "shortage": 600,
+      "recommended_alternate": "STM32F405RGT6",
+      "compat_level": "DROP_IN",
+      "qty": 1000,
+      "unit_price_p50": 8.554,
+      "floor_price": 8.126,
+      "lead_weeks": 8,
+      "risk_level": "HIGH",
+      "offered_price": 8.554
+    },
+    {
+      "mpn": "TPS5430DDAR",
+      "stock": 5000,
+      "shortage": 0,
+      "recommended_alternate": null,
+      "compat_level": "NONE",
+      "qty": 2000,
+      "unit_price_p50": 1.297,
+      "floor_price": 1.232,
+      "lead_weeks": 2,
+      "risk_level": "LOW",
+      "offered_price": 1.297
+    },
+    {
+      "mpn": "LM2596S-ADJ",
+      "stock": 0,
+      "shortage": 500,
+      "recommended_alternate": "LM2596SX-ADJ/NOPB",
+      "compat_level": "DROP_IN",
+      "qty": 500,
+      "unit_price_p50": 1.15,
+      "floor_price": 1.092,
+      "lead_weeks": 10,
+      "risk_level": "HIGH",
+      "offered_price": 1.15,
+      "reflection_repaired": true
+    },
+    {
+      "mpn": "GRM188R71H104KA93D",
+      "stock": 25000,
+      "shortage": 0,
+      "recommended_alternate": null,
+      "compat_level": "NONE",
+      "qty": 10000,
+      "unit_price_p50": 0.038,
+      "floor_price": 0.036,
+      "lead_weeks": 2,
+      "risk_level": "LOW",
+      "offered_price": 0.038
+    }
+  ]
+}

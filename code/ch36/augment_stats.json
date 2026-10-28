@@ -1,0 +1,20 @@
+{
+ "before": {
+  "de/lead_time": 60,
+  "en/lead_time": 114,
+  "en/price": 71,
+  "de/price": 52,
+  "de/unknown": 22,
+  "en/unknown": 45
+ },
+ "after": {
+  "de/lead_time": 60,
+  "en/lead_time": 114,
+  "en/price": 71,
+  "de/price": 60,
+  "de/unknown": 60,
+  "en/unknown": 60
+ },
+ "added": 61,
+ "rejected": {}
+}

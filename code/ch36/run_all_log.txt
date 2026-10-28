@@ -1,0 +1,73 @@
+raw records: 640 threads: 353
+  640  raw export
+  630  defence tenant (must never be here)
+  560  no consent / opted out
+  539  not approved (draft)
+  523  empty or too short reply
+  519  reply language != email language
+  512  internal info in reply
+  503  label does not match email
+  483  exact duplicate
+  450  near duplicate (Jaccard >= 0.8)
+  439  duplicate after pseudonymisation
+repaired encoding: 3
+pii replaced: {'email': 450, 'iban': 0, 'phone': 900, 'name': 900, 'company': 450, 'staff': 450, 'fact': 1046} residual: 0
+split: {'test': 36, 'train': 364, 'val': 39} threads: {'train': 237, 'val': 27, 'test': 27}
+coverage: {'en/lead_time': 138, 'de/lead_time': 70, 'en/unknown': 61, 'en/price': 83, 'de/price': 61, 'de/unknown': 26}
+synthetic added: 61 rejected: {}
+train before: {('de', 'lead_time'): 60, ('en', 'lead_time'): 114, ('en', 'price'): 71, ('de', 'price'): 52, ('de', 'unknown'): 22, ('en', 'unknown'): 45}
+train after:  {('de', 'lead_time'): 60, ('en', 'lead_time'): 114, ('en', 'price'): 71, ('de', 'price'): 60, ('de', 'unknown'): 60, ('en', 'unknown'): 60}
+distinct MPNs in train: 8 | challenge examples: 40
+data/extract_challenge.jsonl {'ok': 40}
+data/extract_test.jsonl {'ok': 36}
+data/extract_train.jsonl {'ok': 364}
+data/extract_train_synth.jsonl {'ok': 61}
+data/extract_val.jsonl {'ok': 39}
+data/reply_test.jsonl {'ok': 36}
+data/reply_train.jsonl {'ok': 364}
+data/reply_val.jsonl {'ok': 39}
+overlap data/extract_train.jsonl ~ data/extract_challenge.jsonl 0
+overlap data/extract_train.jsonl ~ data/extract_test.jsonl 0
+overlap data/extract_train.jsonl ~ data/extract_val.jsonl 0
+overlap data/extract_train_synth.jsonl ~ data/extract_challenge.jsonl 0
+overlap data/extract_train_synth.jsonl ~ data/extract_test.jsonl 0
+overlap data/extract_train_synth.jsonl ~ data/extract_val.jsonl 0
+overlap data/reply_train.jsonl ~ data/reply_test.jsonl 0
+overlap data/reply_train.jsonl ~ data/reply_val.jsonl 0
+(a) no dedup, random split : memoriser exact = 0.20  (n_test=54)
+(b) dedup + thread split   : memoriser exact = 0.06
+errors: []
+Hello {{contact_first_name}},
+
+thank you for your request. For 2,500 pcs STM32F407VGT6 we can offer EUR {{unit_price}} per piece, lead time {{lead_days}} days. We can confirm the delivery date in writing today.
+
+Best regards,
+{{sender_name}} 
+---
+errors: []
+Hallo {{contact_first_name}},
+
+vielen Dank für Ihre Anfrage. Für 1,000 Stk. TPS5430DDAR bieten wir EUR {{unit_price}} pro Stück an, Lieferzeit {{lead_days}} Tage. Ab {{price_break_qty}} Stk. wird der Stückpreis günstiger.
+
+Viele Grüße
+{{sender_name}} 
+---
+errors: []
+Hello {{contact_first_name}},
+
+thank you for your request. For 10,000 pcs NE555DR we can offer EUR {{unit_price}} per piece, lead time {{lead_days}} days. Please let me know if you have any questions.
+
+Best regards,
+{{sender_name}} 
+---
+replaced: {'email': 1, 'iban': 0, 'phone': 1, 'name': 6, 'company': 2, 'staff': 3, 'fact': 7}
+bad sample 1 (reply): ['number_not_from_input']
+bad sample 2 (reply): ['pii_phone']
+bad sample 3 (extract): ['qty_not_in_email']
+bad sample 4 (extract): ['answer_not_json']
+bad sample 5 (reply): ['passes validator!']
+saved assets/img/ch34/funnel.png
+saved assets/img/ch34/near_dup_hist.png
+saved assets/img/ch34/pii_counts.png
+saved assets/img/ch34/coverage.png
+saved assets/img/ch34/contamination.png

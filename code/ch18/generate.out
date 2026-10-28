@@ -1,0 +1,12 @@
+prompt: 'please quote 500 pcs '
+greedy        : TPS5450DDAR, lead time 12 weeks.
+T=0.7         : TPS5450DDAR, lead time 4 weeks. | ATMEGA328P-AU, lead time 12 weeks. | STM32F103C8T6, lead time 12 weeks.
+T=1.0         : TPS5450DDAR, lead time 4 weeks. | LM2596S-5.0, lead time 12 weeks. | STM32F103C8T6, lead time 12 weeks.
+T=2.0         : TPS5450cs o | LM2596S-welead F1000H10e-5.0 tee 10074K50DDAs, 430, 10, 4KA7 | CM15B104Kks of U? deli? 10 weeks.
+top-k=3       : TPS5450DDAR, lead time 6 weeks. | ATMEGA328P-AU, lead time 12 weeks. | STM32F103C8T6, lead time 12 weeks.
+top-p=0.9     : TPS5450DDAR, lead time 4 weeks. | LM2596S-5.0, lead time 12 weeks. | STM32F103C8T6, lead time 12 weeks.
+invented MPN rate T=0.7     : 0/100
+invented MPN rate T=1.0     : 3/100
+invented MPN rate T=2.0     : 94/100
+invented MPN rate top-p=0.9 : 0/100
+prefill 63 tokens: 3.7 ms; decode per token (mean of 20): 2.2 ms

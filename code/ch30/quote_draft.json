@@ -1,0 +1,26 @@
+{
+ "quote_draft_id": "QD-EXAMPLE-0001",
+ "customer": "AlpenBoard Example GmbH",
+ "lines": [
+  {
+   "mpn": "STM32F407VGT6",
+   "qty": 2500,
+   "unit_price": 10.61,
+   "currency": "EUR",
+   "lead_time_days_p90": 38,
+   "valid_days": 14
+  }
+ ],
+ "model": {
+  "win_prob": 0.87,
+  "cost_p50": 7.585,
+  "cost_p90": 8.4882,
+  "price_floor": 8.83,
+  "versions": {
+   "price": "price-demo-0.1",
+   "winprob": "winprob-demo-0.1"
+  }
+ },
+ "status": "DRAFT_NEEDS_APPROVAL",
+ "data": "synthetic"
+}

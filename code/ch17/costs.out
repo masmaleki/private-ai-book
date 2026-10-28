@@ -1,0 +1,14 @@
+7B/2T     C=8.4e+22 GPU-h=   58,333 EUR~   145,833 days@512=4.7
+7B/15T    C=6.3e+23 GPU-h=  437,500 EUR~ 1,093,750 days@512=35.6
+70B/15T   C=6.3e+24 GPU-h=4,375,000 EUR~10,937,500 days@512=356.0
+mini-GPT  C=1.7e+13 GPU-h=        0 EUR~         0 days@512=0.0
+chinchilla tokens for 7B (20 tok/param): 1.4e+11
+domain continued pretraining 7B on 2B tokens: 58 GPU-hours
+mean NLL 4.043 -> perplexity 56.997
+mean NLL 0.178 -> perplexity 1.195
+mean NLL 0.1347 -> perplexity 1.144
+mean NLL 2.0 -> perplexity 7.389
+ln(57) = 4.0431
+dpo (-12.0, -15.0, -13.0, -14.0) margin=0.20 loss=0.5981
+dpo (-11.0, -18.0, -13.0, -14.0) margin=0.60 loss=0.4375
+dpo (-14.0, -13.0, -13.0, -14.0) margin=-0.20 loss=0.7981

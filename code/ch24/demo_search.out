@@ -1,0 +1,13 @@
+20 chunks from 10 fictional documents
+
+query                                   bm25  vector  hybrid
+EXS-BUCK36-SO8 maximum input voltage       1       2       1
+EXSLDO500                                  -       1       1
+exs-buk36 derating                         1       2       1
+2.1 A                                      2       1       2
+which converter for a 24 V rail            5       3       5
+how hot can the microcontroller run        -      16      17
+Rücksendung geöffnete Rolle                -       3       3
+
+cosine(STM32F407VGT6, STM32F407VET6) = 0.58
+cosine(STM32F407VGT6, GRM188R71H104KA93D) = 0.0

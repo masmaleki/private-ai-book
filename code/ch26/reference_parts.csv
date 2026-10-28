@@ -1,0 +1,19 @@
+mpn,manufacturer,category,package,value
+STM32F407VGT6,STMicroelectronics,MCU,LQFP-100,
+TPS5430DDAR,Texas Instruments,DC-DC,SO-8 PowerPAD,
+LM2596S-ADJ,Texas Instruments,DC-DC,TO-263,
+GRM188R71H104KA93D,Murata,MLCC,0603,100nF
+ATMEGA328P-AU,Microchip,MCU,TQFP-32,
+NE555DR,Texas Instruments,Timer,SOIC-8,
+"BC847C,215",Nexperia,BJT,SOT-23,
+EXS-BUCK36-SO8,Example Semiconductors,DC-DC,SO-8,
+EXS-LDO500-33-SOT23,Example Semiconductors,LDO,SOT-23-5,3.3V
+EXS-LDO500-50-SOT23,Example Semiconductors,LDO,SOT-23-5,5.0V
+EXS-MCU407-LQFP100,Example Semiconductors,MCU,LQFP-100,
+EXS-MCU407-LQFP100-T,Example Semiconductors,MCU,LQFP-100,
+EXS-RES10K-0603,Example Semiconductors,Resistor,0603,10k
+EXS-RES10K-0402,Example Semiconductors,Resistor,0402,10k
+EXS-RES4K7-0603,Example Semiconductors,Resistor,0603,4k7
+EXS-CAP100N-0402,Example Semiconductors,MLCC,0402,100nF
+EXS-LED-RED-0805,Example Semiconductors,LED,0805,red
+EXS-CONN-USBC-16P,Example Semiconductors,Connector,SMD,

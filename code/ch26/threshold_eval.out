@@ -1,0 +1,5 @@
+threshold 0.60: auto 87.0%, correct among auto 99.5%
+threshold 0.76: auto 78.0%, correct among auto 99.4%
+threshold 0.90: auto 55.4%, correct among auto 99.6%
+threshold 0.96: auto 32.6%, correct among auto 99.3%
+wrong auto-accepts at 0.90: 1 [('truncate', 0.99)]

@@ -1,0 +1,17 @@
+quarantined at ingestion: ['SUP-C-07#1']
+
+Q: What does Supplier B charge for EXS-BUCK36-SO8?
+  no ACL    PCN-2026-014#0, CUST-NS-01#0, SUP-A-03#0, DS-0001#1
+  secure    SUP-A-03#0, POL-0007#0, PCN-2026-014#0, DS-0001#1
+  top score 0.375 -> answerable=False
+
+Q: Is EXS-BUCK36-SO8 end-of-life? Who still sells it?
+  no scan   SUP-C-07#1, PCN-2026-014#0, DS-0001#1, DS-0001#4
+  secure    DS-0001#1, PCN-2026-014#0, DS-0001#4, DS-0002#2
+  top score 0.35 -> answerable=False
+
+Q: EXS-BUCK36-SO8 VIN max and IOUT at 105 °C
+  rewritten: EXS-BUCK36-SO8 input voltage max and output current at 105 °C
+  reranked : [('DS-0001#2', 0.85), ('DS-0001#0', 0.65), ('DS-0001#3', 0.55), ('DS-0002#2', 0.45)]
+  check good answer: []
+  check bad answer : ['number 40 not in cited source', 'no citation: It is end-of-life, buy from Broker C']

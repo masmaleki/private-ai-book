@@ -1,0 +1,5 @@
+{
+  "config.json": "563b30bb3c8d46bb77c02dc047a11c7e24141023147ae42349846b83c57ddb76",
+  "model.safetensors": "194043771fc3c9fb4fc8919a0ec706dff49b9b081c2aad04de9435f90c1476d4",
+  "tokenizer.json": "e69542b9bcc3b79c81807ab2a860eb477b3a6bc7d310cb640ecb88f2f239af96"
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "speaker": "SARAH",
+  "start": 0.0,
+  "end": 4.46,
+  "text": "Hello Markus, this is Sarah from Alpenline. How can I help?"
+ },
+ {
+  "speaker": "MARKUS",
+  "start": 4.86,
+  "end": 10.83,
+  "text": "Hi Sarah. We need twenty five hundred STM32 controllers for the new board."
+ },
+ {
+  "speaker": "MARKUS",
+  "start": 11.23,
+  "end": 15.66,
+  "text": "The production run starts in three weeks, so delivery is critical."
+ },
+ {
+  "speaker": "SARAH",
+  "start": 16.06,
+  "end": 20.79,
+  "text": "Understood. I will check the supplier and send you a date by Thursday."
+ },
+ {
+  "speaker": "MARKUS",
+  "start": 21.19,
+  "end": 26.39,
+  "text": "Good. Price is less important this time, but please do not be late again."
+ },
+ {
+  "speaker": "SARAH",
+  "start": 26.79,
+  "end": 30.73,
+  "text": "I will also look for an alternate part in case stock is short."
+ },
+ {
+  "speaker": "MARKUS",
+  "start": 31.13,
+  "end": 37.1,
+  "text": "Perfect. You can reach me on my mobile, zero six six zero one two three four."
+ }
+]

@@ -1,0 +1,23 @@
+{
+  "bundle": "private-ai-release",
+  "version": "2026.11.0",
+  "created_utc": "2026-10-17T20:34:26+00:00",
+  "target": "tenant-d-airgap",
+  "files": [
+    {
+      "path": "payload/images/llm-server_2026.11.tar",
+      "bytes": 300000,
+      "sha256": "78031905cadd2d6edcb7eac585758c788dba755572991ed1791c2ff26e8e7a82"
+    },
+    {
+      "path": "payload/models/adapter_model.safetensors",
+      "bytes": 200000,
+      "sha256": "3f9cae541a892f384c902a261926eb4803ef97dd13147e511b35c60cc3ec1b32"
+    },
+    {
+      "path": "payload/sbom/llm-server.cdx.json",
+      "bytes": 62,
+      "sha256": "38dfa8ff22fdb5674d3987fe56e5c7199bc580d3af798b46d4733a146ac046bc"
+    }
+  ]
+}

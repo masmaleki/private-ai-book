@@ -1,0 +1,4 @@
+query: EXS-BUCK36-SO8 output current at 105 °C
+fixed      chunks=26 rank bm25/vec/hyb=[4, 1, 2] mpn_in_chunk=False
+paragraph  chunks=16 rank bm25/vec/hyb=[3, 1, 2] mpn_in_chunk=False
+structural chunks=20 rank bm25/vec/hyb=[2, 1, 2] mpn_in_chunk=True

@@ -1,0 +1,16 @@
+fixed      n=6 words=[50, 50, 50, 50, 50, 39] row105=[3] header=[]
+paragraph  n=3 words=[69, 101, 69] row105=[1] header=[1]
+structural n=5 words=[53, 18, 105, 46, 31] row105=[2] header=[2]
+
+--- fixed chunk containing the 105 degC row ---
+current IOUT | TA = 25 °C | | | 3.0 | A | | Output current IOUT | TA = 105 °C | | | 2.1 | A | | Efficiency | VIN = 24 V, VOUT = 5 V, 1 A | | 91 | | % |
+
+--- structural chunk containing the 105 degC row ---
+[EXS-BUCK36-SO8 datasheet excerpt (fictional) | 6 Electrical Characteristics]
+| Parameter | Condition | Min | Typ | Max | Unit |
+|---|---|---|---|---|---|
+| Input voltage VIN | | 4.5 | | 36 | V |
+| Quiescent current | no load, VIN = 24 V | | 85 | 120 | µA |
+| Output current IOUT | TA = 25 °C | | | 3.0 | A |
+| Output current IOUT | TA = 105 °C | | | 2.1 | A |
+| Efficiency | VIN = 24 V, VOUT = 5 V, 1 A | | 91 | | % |

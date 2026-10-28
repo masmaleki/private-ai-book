@@ -1,0 +1,7 @@
+step 1: get_inventory -> ok
+step 1: predict_price -> ok
+step 2: get_part_offers -> ok
+step 3: final answer
+  Stock: 75 available (snapshot 2026-10-17), short of 2500. Suggested
+  unit price P50 8.4536 EUR (range 7.74-9.7758). One offer >=1000 pcs
+  found; see table. Draft only - needs human review.

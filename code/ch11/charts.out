@@ -1,0 +1,7 @@
+wrote activations.svg
+wrote learning_rates.svg
+wrote loss_curves.svg
+wd=0.0: final train=0.00126 val=0.00862 best val=0.00044 at epoch 45
+wd=0.01: final train=0.00127 val=0.00813 best val=0.00044 at epoch 45
+wrote overfitting.svg
+wrote micrograd_fit.svg

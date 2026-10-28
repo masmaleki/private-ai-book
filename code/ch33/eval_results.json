@@ -1,0 +1,82 @@
+{
+ "0_0.0": {
+  "DONE": 200,
+  "FAILED": 0,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 0,
+  "mean_steps": 4.71
+ },
+ "0_0.05": {
+  "DONE": 179,
+  "FAILED": 21,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 21,
+  "mean_steps": 4.42
+ },
+ "0_0.1": {
+  "DONE": 149,
+  "FAILED": 51,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 51,
+  "mean_steps": 3.93
+ },
+ "0_0.2": {
+  "DONE": 103,
+  "FAILED": 97,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 97,
+  "mean_steps": 3.23
+ },
+ "0_0.3": {
+  "DONE": 74,
+  "FAILED": 126,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 126,
+  "mean_steps": 2.73
+ },
+ "2_0.0": {
+  "DONE": 200,
+  "FAILED": 0,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 0,
+  "mean_steps": 4.71
+ },
+ "2_0.05": {
+  "DONE": 200,
+  "FAILED": 0,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 23,
+  "mean_steps": 4.82
+ },
+ "2_0.1": {
+  "DONE": 200,
+  "FAILED": 0,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 58,
+  "mean_steps": 5.0
+ },
+ "2_0.2": {
+  "DONE": 198,
+  "FAILED": 2,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 145,
+  "mean_steps": 5.39
+ },
+ "2_0.3": {
+  "DONE": 191,
+  "FAILED": 9,
+  "BLOCKED": 0,
+  "STEP_LIMIT": 0,
+  "timeouts": 234,
+  "mean_steps": 5.71
+ }
+}
