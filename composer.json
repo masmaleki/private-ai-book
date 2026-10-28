@@ -1,0 +1,20 @@
+{
+  "name": "masmaleki/private-ai-book",
+  "description": "Companion code (Python, Node.js, PHP/Laravel) for Private AI: From Token to Decision (هوش خصوصی: از توکن تا تصمیم) by Mohammad Sadegh Maleki",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohammad Sadegh Maleki",
+      "homepage": "https://msmaleki.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\Services\\AI\\": "code/ch34/"
+    }
+  }
+}

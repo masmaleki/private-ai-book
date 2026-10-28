@@ -1,0 +1,48 @@
+{
+ "model": "tiny",
+ "wav": "call.wav",
+ "seconds": 0.7,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.0,
+   "text": "The law Marcus, this is Sarah Flamell benline, how can I help?"
+  },
+  {
+   "start": 5.0,
+   "end": 11.36,
+   "text": "Hi Sarah, we need 2500 STM32 Controllers for the New Ward."
+  },
+  {
+   "start": 11.36,
+   "end": 15.96,
+   "text": "The production run starts in three weeks, so deliver it is critical."
+  },
+  {
+   "start": 15.96,
+   "end": 21.16,
+   "text": "Understood, I will check the supplier and send you a date by Thursday."
+  },
+  {
+   "start": 21.16,
+   "end": 22.16,
+   "text": "Good."
+  },
+  {
+   "start": 22.16,
+   "end": 26.76,
+   "text": "Price is less important this time, but please do not be late again."
+  },
+  {
+   "start": 26.76,
+   "end": 30.84,
+   "text": "I will also look for an alternate part in case Stark is short."
+  },
+  {
+   "start": 30.84,
+   "end": 36.76,
+   "text": "Perfect, you can reach me on my mobile, 06601234."
+  }
+ ]
+}

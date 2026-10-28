@@ -1,0 +1,13 @@
+{
+  "model": "price_linear",
+  "version": "v1",
+  "features": [
+    "log_ref",
+    "log10_qty",
+    "days"
+  ],
+  "target": "log(unit_price_eur)",
+  "train_until": "2025-07-01",
+  "train_rows": 2280,
+  "sha256": "c80fbfb59ae06045b108e99474b5c1af6c5dd5f74ede2c0702ea094b59497a05"
+}

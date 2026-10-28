@@ -1,0 +1,13 @@
+base model on a test prompt: 'please quote 2000 pcs LM2596S-5.0, lead time 4 weeks.\nextract:  TPS5450DDAR qty 5000, max lead time 12 weeks.'
+base exact-match accuracy: 0.0
+sft step 50 answer-loss 0.1118 (1s)
+sft step 100 answer-loss 0.0953 (2s)
+sft step 150 answer-loss 0.0916 (4s)
+sft step 200 answer-loss 0.0925 (5s)
+sft step 250 answer-loss 0.0816 (6s)
+sft step 300 answer-loss 0.0745 (7s)
+after SFT on a test prompt: 'please quote 2000 pcs LM2596S-5.0, lead time 4 weeks.\nextract: part LM2596S-5.0, qty 5000, weeks 4.'
+SFT exact-match accuracy: 0.11
+wrong fields out of 100: {'part': 19, 'qty': 70, 'weeks': 41}
+after SFT, free generation: 'please quote 250 pcs TPS5450DDAR, lead time 10 weeks.\nextract: '
+unseen format: 'Hello, we would need 750 pieces of STM32F407VGT6.\nextract: part STM32F103C8T6, qty 500, weeks 4.'

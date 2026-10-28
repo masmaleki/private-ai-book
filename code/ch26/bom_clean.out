@@ -1,0 +1,30 @@
+normaliser: mpn-norm-v3
+column mapping: {'Menge': 'qty', 'Hersteller': 'manufacturer', 'Hersteller-Teilenr.': 'mpn', 'Bezeichnung': 'description', 'Platz': 'refdes'}
+mapping method: rules + llm (values look like reference designators) 
+
+ # input               matched              conf  status
+ 1 NE555DR             NE555DR              0.99  auto
+ 2 stm32f407 vgt6      STM32F407VGT6        0.97  review
+ 3 STM32F407VGT6TR     STM32F407VGT6        0.93  auto
+ 4 STM32F4O7VGT6       STM32F407VGT6        0.91  auto
+ 5 TPS5430DDAR         TPS5430DDAR          0.99  auto
+ 6 TPS5430 DDA R       TPS5430DDAR          0.97  auto
+ 7 LM2596S-ADJ         LM2596S-ADJ          0.99  auto
+ 8 LM2956S-ADJ         LM2596S-ADJ          0.89  review
+ 9 GRM188R71H104KA93D  GRM188R71H104KA93D   0.99  auto
+10 GRM188R71H104KA93   GRM188R71H104KA93D   0.75  review
+11 BC847C,215          BC847C,215           0.99  auto
+12 BC847C              BC847C,215           0.75  review
+13 (none)              EXS-RES10K-0603      0.65  review
+14 EXS-BUCK36-S08      EXS-BUCK36-SO8       0.91  auto
+15 XYZ-123-FOO                              0.00  unmatched
+
+review queue (lowest confidence first):
+  line 15: fuzzy: distance 9, runner-up distance 9
+  line 13: from description: Resistor 10k 0603 | qty 5 != 4 designators
+  line 10: input is a prefix (ordering suffix missing)
+  line 12: input is a prefix (ordering suffix missing)
+  line  8: fuzzy: distance 1, runner-up distance 8
+  line  2: exact after normalisation | qty 2500 != 1 designators
+
+summary: {'auto': 9, 'review': 5, 'unmatched': 1}

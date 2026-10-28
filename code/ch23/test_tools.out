@@ -1,0 +1,6 @@
+PASS test_tenant_isolation
+PASS test_tenant_argument_rejected
+PASS test_role_filter
+PASS test_unknown_tool
+PASS test_sql_injection_is_just_data
+PASS test_audit_written

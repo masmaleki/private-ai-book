@@ -1,0 +1,5 @@
+max |cached - full| logits: 5.84e-06
+ctx   64: naive   2.74 ms/token  cached  0.86 ms/token
+ctx  128: naive   3.14 ms/token  cached  0.76 ms/token
+ctx  256: naive   5.40 ms/token  cached  0.99 ms/token
+ctx  512: naive   7.19 ms/token  cached  0.96 ms/token

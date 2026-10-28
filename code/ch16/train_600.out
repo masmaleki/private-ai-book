@@ -1,0 +1,9 @@
+parameters: 448704 vocab: 57 chars: 315711
+step     1 train 4.021 val 3.913 (0s)
+step   100 train 0.262 val 0.255 (4s)
+step   200 train 0.201 val 0.202 (7s)
+step   300 train 0.199 val 0.189 (9s)
+step   400 train 0.183 val 0.186 (12s)
+step   500 train 0.183 val 0.181 (16s)
+step   600 train 0.176 val 0.178 (22s)
+sample: 'please quote 100 pcs STM32F407VGT6, lead time 12 weeks.\nquote TPS5430DDAR'

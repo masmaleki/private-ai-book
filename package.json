@@ -1,0 +1,11 @@
+{
+  "name": "private-ai-book-companion",
+  "version": "4.0.0",
+  "description": "Companion code (Python, Node.js, PHP) for Private AI: From Token to Decision by Mohammad Sadegh Maleki",
+  "type": "module",
+  "scripts": {
+    "demo:agentic": "node code/ch34/agentic_node.mjs"
+  },
+  "author": "Mohammad Sadegh Maleki",
+  "license": "MIT"
+}

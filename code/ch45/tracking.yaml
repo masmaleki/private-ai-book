@@ -1,0 +1,45 @@
+# tracking.yaml - pilot tracking template (example data, fictional team)
+# status: todo | doing | done | blocked
+# "done" requires evidence (link to PR, eval report, demo recording)
+# "blocked" requires the prerequisite that blocks it
+pilot: price-baseline-plus-explainer
+week: 4
+tasks:
+  - id: P-01
+    title: Export 24 months of demo_offers and demo_quote_lines
+    owner: Ali
+    status: done
+    evidence: "PR #12, data quality report v1"
+  - id: P-02
+    title: Baseline price model (GBM) with WAPE on time-based split
+    owner: Alex
+    status: done
+    evidence: "MLflow run price-baseline-v1, eval report"
+  - id: P-03
+    title: POST /v1/predict/price endpoint with tests
+    owner: Reza
+    status: done
+    evidence: "PR #19, 14 tests green"
+  - id: P-04
+    title: Private LLM server with explainer prompt
+    owner: Jonas
+    status: blocked
+    blocked_by: "GPU server contract not signed (purchasing)"
+  - id: P-05
+    title: Explainer UI panel in quote screen
+    owner: Hani
+    status: doing
+  - id: P-06
+    title: Golden set of 40 explained quotes reviewed by sales
+    owner: Sarah
+    status: doing
+  - id: P-07
+    title: DPIA screening for pilot data
+    owner: Dr. Huber
+    status: done
+    evidence: "screening note: no personal data in features"
+  - id: P-08
+    title: Injection test suite for explainer prompts
+    owner: Lena
+    status: blocked
+    blocked_by: "P-04 (no LLM server to test against)"

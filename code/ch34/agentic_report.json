@@ -1,0 +1,438 @@
+{
+  "goal": "لطفاً برای مشتری NordSensor (RFQ-2026-9941) لیست قطعات BOM زیر را نرمال‌سازی کنید، قیمت و پیش‌فاکتور رسمی فارسی با تخفیف ۱۲٪ صادر نمایید و وضعیت RoHS و قطعات جدید وب (STM32N6) را بررسی کنید.",
+  "active_skills": [
+    "bom-mpn-normalizer",
+    "rfq-margin-governance",
+    "compliance-export-check",
+    "persian-commercial-drafter",
+    "web-deep-research-guard"
+  ],
+  "skill_token_metrics": {
+    "monolithic_tokens": 4140,
+    "progressive_tokens": 1394,
+    "saved_percent": 66.3
+  },
+  "plan_steps": [
+    "گام ۱: بارگذاری پویا (Progressive Disclosure) مهارت‌های مرتبط با درخواست",
+    "گام ۲: واگذاری نرمال‌سازی BOM و بررسی فنی به ریزعامل `bom_technical_subagent`",
+    "گام ۳: در صورت وجود قطعه‌ی ناشناخته در کاتالوگ، فراخوانی ریزعامل تحقیق وب امن (`web_research_subagent`) و ثبت در حافظه‌ی ۴ لایه",
+    "گام ۴: واگذاری محاسبه‌ی قیمت و کنترل کف حاشیه‌ی سود به ریزعامل `pricing_risk_subagent`",
+    "گام ۵: بازبینی خودکار (Reflection) روی خطاهای حاشیه‌ی سود و اصلاح نرخ تخفیف",
+    "گام ۶: تدوین پیش‌فاکتور نهایی و تعیین وضعیت گیت تأیید انسانی (HITL)"
+  ],
+  "subagent_runs": [
+    {
+      "subagent_name": "bom_technical_subagent",
+      "role": "متخصص فنی BOM و نرمال‌سازی MPN",
+      "isolated_context_tokens": 3680,
+      "returned_summary_tokens": 165,
+      "status": "SUCCESS",
+      "structured_output": {
+        "total_lines": 4,
+        "valid_lines": 3,
+        "items": [
+          {
+            "mpn": "STM32F407VGT6",
+            "found": true,
+            "packaging": "TR",
+            "requested_qty": 1200,
+            "stock_qty": 1400,
+            "rohs": true
+          },
+          {
+            "mpn": "LM2596S-5.0",
+            "found": true,
+            "packaging": "T&R",
+            "requested_qty": 2000,
+            "stock_qty": 3200,
+            "rohs": true
+          },
+          {
+            "mpn": "TPS5430DDAR",
+            "found": true,
+            "packaging": "STANDARD",
+            "requested_qty": 500,
+            "stock_qty": 120,
+            "rohs": true
+          },
+          {
+            "mpn": "STM32N657X0H6Q",
+            "found": false,
+            "packaging": "TR",
+            "requested_qty": 300,
+            "stock_qty": 0,
+            "rohs": false
+          }
+        ]
+      },
+      "trace_log": [
+        "[bom_subagent] راه‌اندازی پنجره‌ی زمینه‌ی ایزوله با مهارت bom-mpn-normalizer",
+        "[bom_subagent] بررسی stm32f407vgt6-tr -> STM32F407VGT6",
+        "[bom_subagent] بررسی LM2596S-5.0/T&R -> LM2596S-5.0",
+        "[bom_subagent] بررسی TPS5430DDAR -> TPS5430DDAR",
+        "[bom_subagent] بررسی STM32N657X0H6Q-TR -> STM32N657X0H6Q"
+      ]
+    },
+    {
+      "subagent_name": "web_research_subagent",
+      "role": "متخصص جست‌وجوی وب امن، راستی‌آزمایی PCN/دیتاشیت و ثبت در حافظه‌ی ۴ لایه",
+      "isolated_context_tokens": 3400,
+      "returned_summary_tokens": 180,
+      "status": "SUCCESS",
+      "structured_output": {
+        "researched_count": 1,
+        "enriched_parts": [
+          {
+            "mpn": "STM32N657X0H6Q",
+            "requested_qty": 300,
+            "discovered_via": "web_research_subagent",
+            "specs": {
+              "mpn": "STM32N657X0H6Q",
+              "manufacturer": "STMicroelectronics",
+              "category": "Edge-AI MCU ARM Cortex-M55 + NPU",
+              "lifecycle": "Active",
+              "package": "VFBGA-264",
+              "v_in_range": "1.71V..3.6V",
+              "npu_performance": "0.6 TOPS",
+              "lead_weeks_est": 8,
+              "benchmark_unit_price_eur": 9.4,
+              "rohs": true
+            },
+            "trust_score": 0.96
+          }
+        ],
+        "memory_persistence_receipts": [
+          {
+            "sanitized_query": "STM32N657X0H6Q datasheet specifications lifecycle PCN RoHS",
+            "redacted_entities": [
+              "TENANT_SECRET:nordsensor",
+              "TENANT_SECRET:rfq-"
+            ],
+            "zero_leakage_verified": true,
+            "mpn": "STM32N657X0H6Q",
+            "tier1_working_memory_key": "session:rfq-2026-9941:part:STM32N657X0H6Q",
+            "tier2_markdown_dossier_path": "research_dossiers/STM32N657X0H6Q_research_dossier.md",
+            "tier3_vector_chunk_ids": [
+              "vec_stm32n657x0h6q_c1",
+              "vec_stm32n657x0h6q_c2"
+            ],
+            "tier4_sql_staging_row_id": 1,
+            "tier4_promotion_status": "STAGED_READY_FOR_CATALOG_SYNC",
+            "cross_verified_sources": 2,
+            "blocked_untrusted_sources": 1,
+            "composite_trust_score": 0.96
+          }
+        ]
+      },
+      "trace_log": [
+        "[web_research_subagent] راه‌اندازی ریزعامل تحقیق وب در محیط ایزوله (Sandboxed)",
+        "[web_research_subagent] کوئری پاک‌سازی‌شده برای خروج از شبکه: 'STM32N657X0H6Q datasheet specifications lifecycle PCN RoHS' (حذف‌شده: 2 مورد محرمانه)",
+        "[web_research_subagent] راستی‌آزمایی STM32N657X0H6Q از 2 منبع معتبر (مسدودسازی 1 منبع آلوده) و ثبت در ۴ لایه‌ی حافظه"
+      ]
+    },
+    {
+      "subagent_name": "pricing_risk_subagent",
+      "role": "متخصص قیمت‌گذاری، حاشیه‌ی سود و ریسک موجودی",
+      "isolated_context_tokens": 2670,
+      "returned_summary_tokens": 150,
+      "status": "POLICY_VIOLATION",
+      "structured_output": {
+        "customer_tier": "Tier-A",
+        "requested_discount_pct": 12.0,
+        "quote_total_eur": 6481.25,
+        "all_margins_ok": false,
+        "lines": [
+          {
+            "mpn": "STM32F407VGT6",
+            "packaging": "STANDARD",
+            "qty": 1200,
+            "unit_cost_eur": 3.2,
+            "unit_price_eur": 3.6125,
+            "line_total_eur": 4335.0,
+            "gross_margin_pct": 11.42,
+            "margin_floor_pct": 18.0,
+            "margin_ok": false,
+            "stock_sufficient": true,
+            "lead_weeks": 2
+          },
+          {
+            "mpn": "LM2596S-5.0",
+            "packaging": "STANDARD",
+            "qty": 2000,
+            "unit_cost_eur": 0.58,
+            "unit_price_eur": 0.7225,
+            "line_total_eur": 1445.0,
+            "gross_margin_pct": 19.72,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": true,
+            "lead_weeks": 1
+          },
+          {
+            "mpn": "TPS5430DDAR",
+            "packaging": "STANDARD",
+            "qty": 500,
+            "unit_cost_eur": 1.15,
+            "unit_price_eur": 1.4025,
+            "line_total_eur": 701.25,
+            "gross_margin_pct": 18.0,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": false,
+            "lead_weeks": 10
+          }
+        ]
+      },
+      "trace_log": [
+        "[pricing_subagent] اجرای محاسبات قیمت و حاشیه‌ی سود در پنجره‌ی ایزوله",
+        "[pricing_subagent] STM32F407VGT6: price=3.6125 EUR, margin=11.42%",
+        "[pricing_subagent] LM2596S-5.0: price=0.7225 EUR, margin=19.72%",
+        "[pricing_subagent] TPS5430DDAR: price=1.4025 EUR, margin=18.0%"
+      ]
+    },
+    {
+      "subagent_name": "pricing_risk_subagent",
+      "role": "متخصص قیمت‌گذاری، حاشیه‌ی سود و ریسک موجودی",
+      "isolated_context_tokens": 2670,
+      "returned_summary_tokens": 150,
+      "status": "POLICY_VIOLATION",
+      "structured_output": {
+        "customer_tier": "Tier-A",
+        "requested_discount_pct": 7.0,
+        "quote_total_eur": 6710.0,
+        "all_margins_ok": false,
+        "lines": [
+          {
+            "mpn": "STM32F407VGT6",
+            "packaging": "STANDARD",
+            "qty": 1200,
+            "unit_cost_eur": 3.2,
+            "unit_price_eur": 3.74,
+            "line_total_eur": 4488.0,
+            "gross_margin_pct": 14.44,
+            "margin_floor_pct": 18.0,
+            "margin_ok": false,
+            "stock_sufficient": true,
+            "lead_weeks": 2
+          },
+          {
+            "mpn": "LM2596S-5.0",
+            "packaging": "STANDARD",
+            "qty": 2000,
+            "unit_cost_eur": 0.58,
+            "unit_price_eur": 0.748,
+            "line_total_eur": 1496.0,
+            "gross_margin_pct": 22.46,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": true,
+            "lead_weeks": 1
+          },
+          {
+            "mpn": "TPS5430DDAR",
+            "packaging": "STANDARD",
+            "qty": 500,
+            "unit_cost_eur": 1.15,
+            "unit_price_eur": 1.452,
+            "line_total_eur": 726.0,
+            "gross_margin_pct": 20.8,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": false,
+            "lead_weeks": 10
+          }
+        ]
+      },
+      "trace_log": [
+        "[coordinator_reflection #1] کاهش تخفیف درخواستی به 7.0% برای رعایت کف حاشیه‌ی سود ۱۸٪",
+        "[pricing_subagent] اجرای محاسبات قیمت و حاشیه‌ی سود در پنجره‌ی ایزوله",
+        "[pricing_subagent] STM32F407VGT6: price=3.74 EUR, margin=14.44%",
+        "[pricing_subagent] LM2596S-5.0: price=0.748 EUR, margin=22.46%",
+        "[pricing_subagent] TPS5430DDAR: price=1.452 EUR, margin=20.8%"
+      ]
+    },
+    {
+      "subagent_name": "pricing_risk_subagent",
+      "role": "متخصص قیمت‌گذاری، حاشیه‌ی سود و ریسک موجودی",
+      "isolated_context_tokens": 2670,
+      "returned_summary_tokens": 150,
+      "status": "SUCCESS",
+      "structured_output": {
+        "customer_tier": "Tier-A",
+        "requested_discount_pct": 2.0,
+        "quote_total_eur": 7091.25,
+        "all_margins_ok": true,
+        "lines": [
+          {
+            "mpn": "STM32F407VGT6",
+            "packaging": "STANDARD",
+            "qty": 1200,
+            "unit_cost_eur": 3.2,
+            "unit_price_eur": 3.9525,
+            "line_total_eur": 4743.0,
+            "gross_margin_pct": 19.04,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": true,
+            "lead_weeks": 2
+          },
+          {
+            "mpn": "LM2596S-5.0",
+            "packaging": "STANDARD",
+            "qty": 2000,
+            "unit_cost_eur": 0.58,
+            "unit_price_eur": 0.7905,
+            "line_total_eur": 1581.0,
+            "gross_margin_pct": 26.63,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": true,
+            "lead_weeks": 1
+          },
+          {
+            "mpn": "TPS5430DDAR",
+            "packaging": "STANDARD",
+            "qty": 500,
+            "unit_cost_eur": 1.15,
+            "unit_price_eur": 1.5345,
+            "line_total_eur": 767.25,
+            "gross_margin_pct": 25.06,
+            "margin_floor_pct": 18.0,
+            "margin_ok": true,
+            "stock_sufficient": false,
+            "lead_weeks": 10
+          }
+        ]
+      },
+      "trace_log": [
+        "[coordinator_reflection #2] کاهش تخفیف درخواستی به 2.0% برای رعایت کف حاشیه‌ی سود ۱۸٪",
+        "[pricing_subagent] اجرای محاسبات قیمت و حاشیه‌ی سود در پنجره‌ی ایزوله",
+        "[pricing_subagent] STM32F407VGT6: price=3.9525 EUR, margin=19.04%",
+        "[pricing_subagent] LM2596S-5.0: price=0.7905 EUR, margin=26.63%",
+        "[pricing_subagent] TPS5430DDAR: price=1.5345 EUR, margin=25.06%"
+      ]
+    }
+  ],
+  "reflection_iterations": 2,
+  "final_quote": {
+    "customer_tier": "Tier-A",
+    "requested_discount_pct": 2.0,
+    "quote_total_eur": 7091.25,
+    "all_margins_ok": true,
+    "lines": [
+      {
+        "mpn": "STM32F407VGT6",
+        "packaging": "STANDARD",
+        "qty": 1200,
+        "unit_cost_eur": 3.2,
+        "unit_price_eur": 3.9525,
+        "line_total_eur": 4743.0,
+        "gross_margin_pct": 19.04,
+        "margin_floor_pct": 18.0,
+        "margin_ok": true,
+        "stock_sufficient": true,
+        "lead_weeks": 2
+      },
+      {
+        "mpn": "LM2596S-5.0",
+        "packaging": "STANDARD",
+        "qty": 2000,
+        "unit_cost_eur": 0.58,
+        "unit_price_eur": 0.7905,
+        "line_total_eur": 1581.0,
+        "gross_margin_pct": 26.63,
+        "margin_floor_pct": 18.0,
+        "margin_ok": true,
+        "stock_sufficient": true,
+        "lead_weeks": 1
+      },
+      {
+        "mpn": "TPS5430DDAR",
+        "packaging": "STANDARD",
+        "qty": 500,
+        "unit_cost_eur": 1.15,
+        "unit_price_eur": 1.5345,
+        "line_total_eur": 767.25,
+        "gross_margin_pct": 25.06,
+        "margin_floor_pct": 18.0,
+        "margin_ok": true,
+        "stock_sufficient": false,
+        "lead_weeks": 10
+      }
+    ]
+  },
+  "approval_status": "PENDING_HUMAN_APPROVAL",
+  "persian_response_preview": "پیش‌فاکتور رسمی برای مشتری (Tier-A) صادر شد: جمع اقلام کاتالوگ 7091.25 یورو (تخفیف نهایی تاییدشده: 2.0٪، وضعیت: PENDING_HUMAN_APPROVAL). همچنین 1 قطعه‌ی جدید از طریق ریزعامل تحقیق وب راستی‌آزمایی و در هر ۴ لایه‌ی حافظه ثبت شد.",
+  "coordinator_context_tokens": 2449,
+  "total_subagent_isolated_tokens": 15090,
+  "web_research_and_memory_summary": {
+    "researched_count": 1,
+    "enriched_parts": [
+      {
+        "mpn": "STM32N657X0H6Q",
+        "requested_qty": 300,
+        "discovered_via": "web_research_subagent",
+        "specs": {
+          "mpn": "STM32N657X0H6Q",
+          "manufacturer": "STMicroelectronics",
+          "category": "Edge-AI MCU ARM Cortex-M55 + NPU",
+          "lifecycle": "Active",
+          "package": "VFBGA-264",
+          "v_in_range": "1.71V..3.6V",
+          "npu_performance": "0.6 TOPS",
+          "lead_weeks_est": 8,
+          "benchmark_unit_price_eur": 9.4,
+          "rohs": true
+        },
+        "trust_score": 0.96
+      }
+    ],
+    "memory_persistence_receipts": [
+      {
+        "sanitized_query": "STM32N657X0H6Q datasheet specifications lifecycle PCN RoHS",
+        "redacted_entities": [
+          "TENANT_SECRET:nordsensor",
+          "TENANT_SECRET:rfq-"
+        ],
+        "zero_leakage_verified": true,
+        "mpn": "STM32N657X0H6Q",
+        "tier1_working_memory_key": "session:rfq-2026-9941:part:STM32N657X0H6Q",
+        "tier2_markdown_dossier_path": "research_dossiers/STM32N657X0H6Q_research_dossier.md",
+        "tier3_vector_chunk_ids": [
+          "vec_stm32n657x0h6q_c1",
+          "vec_stm32n657x0h6q_c2"
+        ],
+        "tier4_sql_staging_row_id": 1,
+        "tier4_promotion_status": "STAGED_READY_FOR_CATALOG_SYNC",
+        "cross_verified_sources": 2,
+        "blocked_untrusted_sources": 1,
+        "composite_trust_score": 0.96
+      }
+    ]
+  },
+  "memory_tiers_snapshot": {
+    "tier1_working_keys": [
+      "session:rfq-2026-9941:part:STM32N657X0H6Q"
+    ],
+    "tier2_dossier_files": [
+      "STM32N657X0H6Q_research_dossier.md"
+    ],
+    "tier3_vector_chunks_indexed": 2,
+    "tier4_sql_staging_rows": [
+      {
+        "id": 1,
+        "mpn": "STM32N657X0H6Q",
+        "manufacturer": "STMicroelectronics",
+        "category": "Edge-AI MCU ARM Cortex-M55 + NPU",
+        "lifecycle_status": "Active",
+        "lead_weeks_est": 8,
+        "benchmark_unit_price_eur": 9.4,
+        "rohs_compliant": true,
+        "source_count": 2,
+        "composite_trust_score": 0.96,
+        "promotion_status": "STAGED_READY_FOR_CATALOG_SYNC",
+        "dossier_file": "STM32N657X0H6Q_research_dossier.md"
+      }
+    ]
+  }
+}

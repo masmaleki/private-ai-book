@@ -1,0 +1,33 @@
+{
+ "replay": {
+  "valid": 1.0,
+  "exact": 0.9,
+  "generic_loss": 0.4723621040582657
+ },
+ "facts": {
+  "acc_known": 1.0,
+  "unseen_numeric": "10/10",
+  "unseen_examples": [
+   [
+    "BTG422V",
+    "2.65"
+   ],
+   [
+    "FJL926X",
+    "5.03"
+   ],
+   [
+    "CWM703E",
+    "7.82"
+   ],
+   [
+    "PKT912J",
+    "5.24"
+   ]
+  ],
+  "stale_after_change": "10/10",
+  "leak_same_tenant": "0.0081",
+  "leak_other_tenant_prompt": "0.0081",
+  "generic_loss": 2.1370766878128054
+ }
+}

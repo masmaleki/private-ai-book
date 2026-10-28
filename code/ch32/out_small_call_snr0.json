@@ -1,0 +1,43 @@
+{
+ "model": "small",
+ "wav": "call_snr0.wav",
+ "seconds": 3.4,
+ "duration": 37.5,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.0,
+   "text": "Hello, Margaret. It is here at the Melbourne Lighthouse. How can I help?"
+  },
+  {
+   "start": 5.0,
+   "end": 10.0,
+   "text": "I tell her, we need to end this eye-tongue with the end-32 control of the new war."
+  },
+  {
+   "start": 11.0,
+   "end": 15.0,
+   "text": "The production line passed in three weeks, so deliver it to us, it's all."
+  },
+  {
+   "start": 16.0,
+   "end": 20.0,
+   "text": "Understood. I will hand over the flyers and hand them away by Thursday."
+  },
+  {
+   "start": 21.0,
+   "end": 26.0,
+   "text": "Well, flight is less important this time, but please do not leave late again."
+  },
+  {
+   "start": 26.0,
+   "end": 30.0,
+   "text": "I will also look for a modern pilot in case traffic falls."
+  },
+  {
+   "start": 31.0,
+   "end": 36.0,
+   "text": "Perfect. You can reach me on my mobile at 05-5-01234."
+  }
+ ]
+}

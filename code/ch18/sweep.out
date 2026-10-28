@@ -1,0 +1,10 @@
+{'T': 0.3, 'plain': 0, 'top_p_0.9': 0}
+{'T': 0.5, 'plain': 0, 'top_p_0.9': 0}
+{'T': 0.7, 'plain': 0, 'top_p_0.9': 0}
+{'T': 1.0, 'plain': 3, 'top_p_0.9': 0}
+{'T': 1.3, 'plain': 18, 'top_p_0.9': 0}
+{'T': 1.6, 'plain': 53, 'top_p_0.9': 0}
+{'T': 2.0, 'plain': 94, 'top_p_0.9': 79}
+greedy, no stop, 160 chars : '100 pcs TPS5450DDAR, lead time 12 weeks.\nrfq: TPS5450DDAR qty 2000, max lead time 12 weeks.\ncan you offer 100 pcs of STM32F103C8T6? delivery in 12 weeks.\ncan yo'
+greedy + rep 1.1, 160 chars: '100 pcs TPS5430DDAR, lead time 6 weeks.\nrfq: TPS5450DDAR qty 250, max lead time 12 weeks.\nrfq: TPS5450DDAR qty 2000, max lead time 8 weeks.\nrfq: TPS5450DDAR qty'
+greedy + rep 1.3, 160 chars: '100 pcs TPS5430DDAR, lead time 6 weeks.\nrfq: GRM188R71H104KA93D qty 2000, max lead time 12 weeks.\ncan you offer 100 pcs of LM2596S-5.0? delivery in 10 weeks.\nca'
