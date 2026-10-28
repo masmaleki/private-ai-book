@@ -197,8 +197,187 @@ def make_plan_execute_reflection_chart(chapter_folder: str = "ch34"):
     save(fig, chapter_folder, "plan_execute_reflection_trace.png")
 
 
+
+
+def make_web_research_memory_tiers_chart(chapter_folder: str = "ch34"):
+    """
+    شکل ۳۴-۵: معماری ایجنت جست‌وجوی وب امن (Zero-Leakage Web Research)
+    و چرخه‌ی ماندگاری دانش در ۴ لایه‌ی حافظه (4-Tier Agent Memory Persistence).
+    """
+    from matplotlib.patches import FancyBboxPatch
+    setup()
+    fig, ax = plt.subplots(figsize=(13.5, 8.8))
+    ax.set_facecolor("#F8FAFC")
+    fig.patch.set_facecolor("#F8FAFC")
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 100)
+    ax.axis("off")
+
+    # عنوان اصلی
+    ax.text(
+        50, 96.2,
+        fa("معماری ایجنت جست‌وجوی وب امن و ماندگاری دانش در ۴ لایه‌ی حافظه (4-Tier Memory)"),
+        ha="center", va="center", fontsize=14, fontweight="bold", color="#0F172A",
+    )
+    ax.text(
+        50, 92.4,
+        fa("از تشخیص شکاف دانش و پاک‌سازی کوئری برون‌مرزی تا راستی‌آزمایی متقاطع و ذخیره‌سازی سلسله‌مراتبی در ERP"),
+        ha="center", va="center", fontsize=9.8, color="#475569",
+    )
+
+    # ردیف بالا: چرخه‌ی ۴ مرحله‌ای تحقیق وب امن (از راست به چپ برای فارسی)
+    top_steps = [
+        (76.5, 75.0, 20.5, 13.0, "#1E3A8A", "#EFF6FF", "۱. تشخیص شکاف دانش", "قطعه یا PCN در کاتالوگ و وزن‌های\nLLM نیست (STM32N657X0H6Q)"),
+        (52.0, 75.0, 20.5, 13.0, "#0F766E", "#F0FDFA", "۲. دروازه پاک‌سازی برون‌مرزی", "حذف نام مشتری (NordSensor)،\nکد RFQ و قیمت هدف پیش از خروج"),
+        (27.5, 75.0, 20.5, 13.0, "#B45309", "#FFFBEB", "۳. جست‌وجوی وب در Sandbox", "واکشی دیتاشیت و PCN از منابع\nمجاز (st.com / mouser.com)"),
+        (3.0,  75.0, 20.5, 13.0, "#7C3AED", "#F5F3FF", "۴. راستی‌آزمایی و فیلتر تزریق", "تطبیق >= ۲ منبع مستقل و مسدودسازی\nPrompt Injection (Trust=0.96)"),
+    ]
+
+    for x, y, w, h, edge_c, fill_c, title_fa, desc_fa in top_steps:
+        box = FancyBboxPatch(
+            (x, y), w, h,
+            boxstyle="round,pad=0.5,rounding_size=1.4",
+            facecolor=fill_c, edgecolor=edge_c, linewidth=2.0,
+        )
+        ax.add_patch(box)
+        hdr = FancyBboxPatch(
+            (x, y + h - 3.6), w, 3.6,
+            boxstyle="round,pad=0.2,rounding_size=1.0",
+            facecolor=edge_c, edgecolor=edge_c, linewidth=1.0,
+        )
+        ax.add_patch(hdr)
+        ax.text(x + w / 2, y + h - 1.8, fa(title_fa), ha="center", va="center", fontsize=9.8, fontweight="bold", color="white")
+        ax.text(x + w / 2, y + (h - 3.6) / 2, fa(desc_fa), ha="center", va="center", fontsize=8.5, color="#1E293B", linespacing=1.35)
+
+    # فلش‌های اتصال ردیف بالا (راست به چپ)
+    for x_start, x_end in [(76.3, 72.7), (51.8, 48.2), (27.3, 23.7)]:
+        ax.annotate(
+            "", xy=(x_end, 81.5), xytext=(x_start, 81.5),
+            arrowprops=dict(arrowstyle="-|>", color="#334155", lw=2.0, mutation_scale=15),
+        )
+
+    # نوار میانی: توزیع‌کننده‌ی حافظه‌ی چهارلایه (Memory Router)
+    router_box = FancyBboxPatch(
+        (8.0, 61.5), 84.0, 7.2,
+        boxstyle="round,pad=0.4,rounding_size=1.2",
+        facecolor="#0F172A", edgecolor="#334155", linewidth=1.8,
+    )
+    ax.add_patch(router_box)
+    ax.text(
+        50, 65.1,
+        fa("موتور توزیع و ماندگاری دانش تأییدشده (Multi-Tier Memory Persistence Router) — کجا و با چه ماندگاری ذخیره شود؟"),
+        ha="center", va="center", fontsize=10.2, fontweight="bold", color="#F8FAFC",
+    )
+
+    # فلش از مرحله‌ی ۴ به نوار میانی
+    ax.annotate(
+        "", xy=(25.0, 68.9), xytext=(13.2, 74.8),
+        arrowprops=dict(arrowstyle="-|>", color="#7C3AED", lw=2.2, mutation_scale=15),
+    )
+
+    # چهار لایه‌ی حافظه در ردیف پایین (از راست به چپ: لایه ۱ تا لایه ۴)
+    tiers = [
+        (
+            75.5, 12.0, 21.5, 43.0, "#0284C7", "#E0F2FE",
+            "لایهٔ ۱: حافظهٔ کاری و کوتاه‌مدت",
+            "Tier 1: Working / Session Memory",
+            [
+                "• محل ذخیره: Context + Redis",
+                "• ماندگاری (TTL): ۳۰ دقیقه (نشست)",
+                "• تأخیر بازیابی: < ۵ میلی‌ثانیه",
+                "• کلید: session:rfq:STM32N6",
+                "• کاربرد: پاسخ فوری به RFQ جاری",
+                "  بدون نیاز به فراخوانی مجدد وب",
+            ],
+        ),
+        (
+            51.0, 12.0, 21.5, 43.0, "#0D9488", "#CCFBF1",
+            "لایهٔ ۲: پروندهٔ تحقیقاتی اپیزودیک",
+            "Tier 2: Markdown / JSON Dossier",
+            [
+                "• محل ذخیره: دیسک / Object Store",
+                "• ماندگاری: دائمی (نسخه‌بندی‌شده)",
+                "• فایل: STM32N6_dossier.md",
+                "• محتوا: خلاصه فنی + URL منابع",
+                "  + زمان واکشی + هش SHA-256",
+                "• کاربرد: ممیزی انسانی و بازخوانی",
+            ],
+        ),
+        (
+            26.5, 12.0, 21.5, 43.0, "#D97706", "#FEF3C7",
+            "لایهٔ ۳: حافظهٔ معنایی بلندمدت RAG",
+            "Tier 3: Vector / Hybrid Index",
+            [
+                "• محل ذخیره: Qdrant / Elasticsearch",
+                "• ماندگاری (TTL): ۳۰ تا ۹۰ روز",
+                "• متادیتا: source_url, trust=0.96,",
+                "  fetched_at, injection_scanned",
+                "• کاربرد: بازیابی معنایی در تمام",
+                "  پروژه‌ها و نشست‌های آینده شرکت",
+            ],
+        ),
+        (
+            2.0, 12.0, 21.5, 43.0, "#E11D48", "#FFE4E6",
+            "لایهٔ ۴: حافظهٔ ساختاریافتهٔ عملیاتی",
+            "Tier 4: SQL ERP Staging Table",
+            [
+                "• محل ذخیره: MariaDB / ClickHouse",
+                "• جدول: part_web_enrichment",
+                "• ستون‌ها: lifecycle, lead_weeks,",
+                "  benchmark_eur, trust_score",
+                "• گارد امنیتی: Staging + تأیید مهندس",
+                "  پیش از ارتقا به کاتالوگ اصلی ERP",
+            ],
+        ),
+    ]
+
+    for x, y, w, h, edge_c, fill_c, title_fa, sub_en, bullets in tiers:
+        card = FancyBboxPatch(
+            (x, y), w, h,
+            boxstyle="round,pad=0.5,rounding_size=1.5",
+            facecolor="white", edgecolor=edge_c, linewidth=2.2,
+        )
+        ax.add_patch(card)
+        top_band = FancyBboxPatch(
+            (x, y + h - 8.5), w, 8.5,
+            boxstyle="round,pad=0.2,rounding_size=1.2",
+            facecolor=edge_c, edgecolor=edge_c, linewidth=1.0,
+        )
+        ax.add_patch(top_band)
+        ax.text(x + w / 2, y + h - 3.2, fa(title_fa), ha="center", va="center", fontsize=9.6, fontweight="bold", color="white")
+        ax.text(x + w / 2, y + h - 6.6, sub_en, ha="center", va="center", fontsize=7.8, fontweight="bold", color="#F1F5F9")
+
+        # فلش از نوار میانی به هر لایه
+        ax.annotate(
+            "", xy=(x + w / 2, y + h + 0.3), xytext=(x + w / 2, 61.3),
+            arrowprops=dict(arrowstyle="-|>", color=edge_c, lw=2.2, mutation_scale=15),
+        )
+
+        # بالت‌های داخل هر کارت
+        curr_y = y + h - 12.2
+        for b in bullets:
+            ax.text(x + w - 1.2, curr_y, fa(b, digits=False), ha="right", va="center", fontsize=8.3, color="#1E293B")
+            curr_y -= 4.8
+
+    # نوار پایینی: سپر دفاعی در برابر مسمومیت حافظه (Memory Poisoning Guard)
+    footer = FancyBboxPatch(
+        (2.0, 2.2), 95.0, 6.8,
+        boxstyle="round,pad=0.4,rounding_size=1.0",
+        facecolor="#ECFDF5", edgecolor="#059669", linewidth=1.8,
+    )
+    ax.add_patch(footer)
+    ax.text(
+        50, 5.6,
+        fa("سپر دفاعی مسمومیت حافظه (Memory Poisoning Guard): هیچ داده‌ی وبی بدون اسکن Prompt Injection، امتیاز اعتماد >= 0.70 و تطبیق >= ۲ منبع وارد لایه‌های ۲ تا ۴ نمی‌شود."),
+        ha="center", va="center", fontsize=9.2, fontweight="bold", color="#065F46",
+    )
+
+    save(fig, chapter_folder, "web_research_memory_tiers.png")
+
+
 if __name__ == "__main__":
     ch = sys.argv[1] if len(sys.argv) > 1 else "ch34"
     make_ai_stack_human_body(ch)
     make_context_isolation_chart(ch)
     make_plan_execute_reflection_chart(ch)
+    make_web_research_memory_tiers_chart(ch)

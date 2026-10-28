@@ -21,6 +21,9 @@ cd private-ai-book
 # اجرای تست‌های پایپ‌لاین ترکیبی NLP (فصل ۱۲) و معماری Agentic AI (فصل ۳۴)
 pytest code/ch12/ code/ch34/ -v
 
+# اجرای ایجنت جست‌وجوی وب امن و معماری ۴ لایه حافظه (فصل ۳۴)
+python3 code/ch34/web_research_memory_agent.py
+
 # اجرای ارکستریتور ریزعامل‌ها در Node.js
 node code/ch34/agentic_node.mjs
 ```

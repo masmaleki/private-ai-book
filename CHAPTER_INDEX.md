@@ -1,4 +1,4 @@
-# فهرست کامل فصل‌ها و کدهای اجرایی کتاب «هوش خصوصی: از توکن تا تصمیم» (ویرایش چهارم)
+# فهرست کامل فصل‌ها و کدهای اجرایی کتاب «هوش خصوصی: از توکن تا تصمیم» (ویرایش پنجم — Revision 5)
 
 این جدول نقشه‌ی کامل تمام **۴۵ فصل و ۵ پیوست** کتاب را به همراه پوشه‌ی کدها و اسکریپت‌های اصلی هر فصل نشان می‌دهد.
 
@@ -37,7 +37,7 @@
 | **CH31** | هوش ایمیل فروش | `code/ch31/` | `code/ch31/answers.py`، `code/ch31/charts.py`، `code/ch31/emails.py`، `code/ch31/extract.py`، `code/ch31/heldout.py`، `code/ch31/signals.py` |
 | **CH32** | هوش فروش (۲): تماس‌های صوتی با Whisper محلی | `code/ch32/` | `code/ch32/answers.py`، `code/ch32/call_to_crm.py`، `code/ch32/charts.py`، `code/ch32/make_call.py`، `code/ch32/transcribe.py`، `code/ch32/wer.py` |
 | **CH33** | Agentها: از پیشنهاد تا اقدام کنترل‌شده | `code/ch33/` | `code/ch33/agent.py`، `code/ch33/answers.py`، `code/ch33/charts.py`، `code/ch33/evaluate.py` |
-| **CH34** | هوش مصنوعی عاملی (Agentic AI): از مهارت‌ها و ریزعامل‌ها تا سیستم‌های چندعاملی | `code/ch34/` | `code/ch34/AgenticQuoteOrchestrator.php`، `code/ch34/agentic_node.mjs`، `code/ch34/agentic_system.py`، `code/ch34/charts.py`، `code/ch34/test_agentic_system.py` |
+| **CH34** | هوش مصنوعی عاملی (Agentic AI): از مهارت‌ها، ریزعامل‌های تحقیق وب و حافظهٔ چهارلایه تا سیستم‌های چندعاملی | `code/ch34/` | `code/ch34/AgenticQuoteOrchestrator.php`، `code/ch34/agentic_node.mjs`، `code/ch34/agentic_system.py`، `code/ch34/web_research_memory_agent.py`، `code/ch34/charts.py`، `code/ch34/test_agentic_system.py` |
 | **CH35** | Fine-tuning: کی، چرا و چه چیزی را یاد می‌دهد؟ | `code/ch35/` | `code/ch35/catch_all.py`، `code/ch35/charts.py`، `code/ch35/checks.py`، `code/ch35/data_curve.py`، `code/ch35/data_curve_diag.py`، `code/ch35/decision_tree.py` و ... |
 | **CH36** | ساخت دیتاست Fine-tuning | `code/ch36/` | `code/ch36/answers.py`، `code/ch36/augment.py`، `code/ch36/challenge_set.py`، `code/ch36/charts.py`، `code/ch36/contamination.py`، `code/ch36/make_raw.py` و ... |
 | **CH37** | LoRA و QLoRA در عمل | `code/ch37/` | `code/ch37/infer_compare.py`، `code/ch37/lora_by_hand.py`، `code/ch37/make_dataset.py`، `code/ch37/train_lora.py`، `code/ch37/unsloth_qlora_train.py` |

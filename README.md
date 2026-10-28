@@ -1,4 +1,4 @@
-# هوش خصوصی: از توکن تا تصمیم (Private AI: From Token to Decision)
+# هوش خصوصی: از توکن تا تصمیم (Private AI: From Token to Decision — ویرایش پنجم / Revision 5)
 
 **مخزن رسمی کدهای همراه کتاب و فهرست زنده‌ی ابزارها و مخازن متن‌باز مهندسی هوش مصنوعی**  
 **نویسنده:** محمدصادق مالکی (Mohammad Sadegh Maleki) — هم‌بنیان‌گذار و CTO شرکت AustroByte GmbH  
@@ -43,8 +43,9 @@ cd private-ai-book
 python3 code/ch12/nlp_pipeline.py
 pytest code/ch12/test_nlp_pipeline.py -v
 
-# 3. اجرای سیستم Agentic AI (Skills + Subagents + Reflection) در پایتون، Node.js و تست‌ها (فصل ۳۴)
+# 3. اجرای سیستم Agentic AI (Skills + Subagents + Web Research + 4-Tier Memory + Reflection) در پایتون، Node.js و تست‌ها (فصل ۳۴)
 python3 code/ch34/agentic_system.py
+python3 code/ch34/web_research_memory_agent.py
 pytest code/ch34/test_agentic_system.py -v
 node code/ch34/agentic_node.mjs
 ```
@@ -107,10 +108,11 @@ node code/ch34/agentic_node.mjs
 - **[`TOOLKIT_FA.md`](./TOOLKIT_FA.md)** — راهنمای جامع و طبقه‌بندی‌شده‌ی ابزارها و مخازن متن‌باز مهندسی هوش مصنوعی (پیوست هـ کتاب).
 - **[`code/`](./code/)** — کدهای اجرایی فصل‌به‌فصل (`ch01` تا `ch45`) و پیوست‌ها (`appA`، `appC`، `appD`):
   - `code/ch12/` — پایپ‌لاین ترکیبی ۳ لایه‌ی پردازش زبان طبیعی فارسی و انگلیسی (`nlp_pipeline.py` + `test_nlp_pipeline.py`).
-  - `code/ch34/` — معماری کامل **Agentic AI** (مهارت‌ها `Skills`، ریزعامل‌ها `Subagents`، حلقه‌ی `Plan-and-Execute + Reflection`) در سه زبان:
-    - **Python**: `code/ch34/agentic_system.py` و `code/ch34/test_agentic_system.py`
+  - `code/ch34/` — معماری کامل **Agentic AI** (مهارت‌ها `Skills`، ریزعامل‌ها `Subagents`، **ریزعامل جست‌وجوی وب و تحقیق خودکار با سانسور کوئری خروجی** `OutboundQuerySanitizer`، **معماری چهارلایهٔ حافظه و ماندگاری دانش** `MultiTierAgentMemory` و حلقه‌ی `Plan-and-Execute + Reflection`) در سه زبان:
+    - **Python**: `code/ch34/agentic_system.py`، `code/ch34/web_research_memory_agent.py` و `code/ch34/test_agentic_system.py`
     - **Node.js / ESM**: `code/ch34/agentic_node.mjs`
     - **PHP 8.3 / Laravel**: `code/ch34/AgenticQuoteOrchestrator.php`
+    - **نمونه پروندهٔ تحقیق اپیزودیک (Tier 2 Dossier)**: `code/ch34/research_dossiers/STM32N657X0H6Q_research_dossier.md`
   - `code/ch37/` — آموزش LoRA از صفر (`lora_by_hand.py`، `train_lora.py`) + اسکریپت شتاب‌دهی QLoRA با **Unsloth** (`unsloth_qlora_train.py`).
   - `code/appC/` — پروژه‌ی مرجع یکپارچه‌ی استخراج، قیمت‌گذاری و ارزیابی (پیوست ج).
 - **[`skills/`](./skills/)** — کتابخانه‌ی مهارت‌های استاندارد (`SKILL.md`) با الگوی افشای تدریجی (Progressive Disclosure — فصل ۳۴):
@@ -118,5 +120,7 @@ node code/ch34/agentic_node.mjs
   - `skills/bom-mpn-normalization/SKILL.md` — نرمال‌سازی کد قطعات (MPN) و پسوندهای بسته‌بندی در لیست قطعات (BOM).
   - `skills/persian-hybrid-nlp-triage/SKILL.md` — تریاژ ۳ لایه‌ی پیام‌های بازرگانی فارسی و دوزبانه.
   - `skills/security-egress-and-pii-guard/SKILL.md` — کنترل خروج داده (Zero Unauthorized Egress)، جداسازی سازمان‌ها و حذف PII.
-- **[`assets/diagrams/`](./assets/diagrams/)** — دیاگرام‌های معماری با کیفیت بالا (از جمله اینفوگرافیک *«استک هوش مصنوعی به زبان بدن انسان»* در `assets/diagrams/ch34/ai_stack_human_body.png`).
+  - `skills/web-deep-research-guard/SKILL.md` — پروتکل تحقیق وب بدون نشت اسرار تجاری، رتبه‌بندی اعتبار دامنه و ثبت در حافظهٔ چهارلایه.
+- **[`assets/diagrams/`](./assets/diagrams/)** — دیاگرام‌های معماری با کیفیت بالا (از جمله اینفوگرافیک *«استک هوش مصنوعی به زبان بدن انسان»* در `assets/diagrams/ch34/ai_stack_human_body.png` و دیاگرام *«معماری ریزعامل تحقیق وب و چهار لایهٔ ماندگاری حافظه»* در `assets/diagrams/ch34/web_research_memory_tiers.png`).
+- **[`chapters/ch34.md`](./chapters/ch34.md)** — متن کامل فصل ۳۴ (ویرایش پنجم) شامل بخش‌های جدید ریزعامل جست‌وجوی وب و معماری چهارلایهٔ حافظه.
 - **فایل‌های پیکربندی چندزبانه:** `requirements.txt` (پایتون)، `package.json` (Node.js) و `composer.json` (PHP/Laravel).
